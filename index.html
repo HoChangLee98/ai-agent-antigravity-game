@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>가위 바위 보</h1>
+            <div class="stats-bar">
+                <button class="stat-btn active" id="filter-all">
+                    <span class="stat-label">승률 (전체)</span>
+                    <span id="win-rate" class="stat-value">0%</span>
+                </button>
+                <button class="stat-btn" id="filter-win">
+                    <span class="stat-label">승리</span>
+                    <span id="win-count" class="stat-value">0</span>
+                </button>
+                <button class="stat-btn" id="filter-lose">
+                    <span class="stat-label">패배</span>
+                    <span id="lose-count" class="stat-value">0</span>
+                </button>
+                <button class="stat-btn" id="filter-draw">
+                    <span class="stat-label">무승부</span>
+                    <span id="draw-count" class="stat-value">0</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <div class="choices" id="choices">
+                    <button class="choice-btn" id="rock" data-choice="rock">
+                        <div class="icon">✊</div>
+                    </button>
+                    <button class="choice-btn" id="paper" data-choice="paper">
+                        <div class="icon">✋</div>
+                    </button>
+                    <button class="choice-btn" id="scissors" data-choice="scissors">
+                        <div class="icon">✌️</div>
+                    </button>
+                </div>
+
+                <div class="result-area hidden" id="result-area">
+                    <div class="result-message-container">
+                        <h2 id="result-message"></h2>
+                    </div>
+                    <div class="result-display" id="result-grid">
+                        <!-- Dynamic result content -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-container">
+                <div class="game-settings">
+                    <div class="setting-group">
+                        <label for="game-mode">플레이 모드</label>
+                        <select id="game-mode">
+                            <option value="normal">기본 (단판)</option>
+                            <option value="bestOf3">3판 2선승</option>
+                            <option value="bestOf5">5판 3선승</option>
+                        </select>
+                    </div>
+                    <div class="setting-group">
+                        <label for="opponent-count">상대 수</label>
+                        <input type="number" id="opponent-count" min="1" max="10" value="1" class="number-input">
+                        <span class="input-suffix">명</span>
+                    </div>
+                </div>
+
+                <button class="play-again-btn hidden" id="play-again-btn">다시 하기</button>
+                <div id="round-status" class="round-status hidden">
+                    라운드 <span id="current-round">1</span> / <span id="total-rounds">3</span>
+                </div>
+            </div>
+
+            <div class="history-container">
+                <div class="history-header">
+                    <h3 id="history-title">📜 전체 히스토리</h3>
+                    <div class="history-actions">
+                        <button id="toggle-history-btn" class="sm-btn">접기/펼치기</button>
+                        <button id="clear-history-btn" class="sm-btn danger">초기화</button>
+                    </div>
+                </div>
+                <ul id="history-list" class="history-list">
+                    <!-- History items -->
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ by AI Agent</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
