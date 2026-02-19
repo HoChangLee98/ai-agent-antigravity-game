@@ -1,17 +1,46 @@
-# 🎮 Antigravity Rock Paper Scissors Game
+# 🎮 가위바위보 멀티플레이어 (RPS Multiplayer)
 
-A modern, premium-designed Rock Paper Scissors game with advanced features.
+최신 웹 기술을 사용한 프리미엄 디자인의 실시간 멀티플레이어 가위바위보 게임입니다. 친구들과 함께 실시간으로 긴장감 넘치는 대결을 즐겨보세요!
 
-## ✨ Features
+## 🔗 실시간 플레이 링크
+방금 생성된 따끈따끈한 초대 링크입니다. 지금 바로 접속해서 친구들과 함께 하세요!
+👉 **[지금 바로 게임 참여하기!](https://recipe-jean-specifies-instant.trycloudflare.com)**
 
-- **Premium UI**: Glassmorphism design with smooth animations.
-- **Game Modes**: Best of 3, 5, or 10 rounds.
-- **Opponent Selection**: Choose between 1, 2, or 3 opponents.
-- **History Tracking**: Visual history of recent match results.
-- **Responsive Design**: Works on desktop and mobile.
+---
 
-## 🚀 Play Now
+## ✨ 주요 기능
 
-[Click here to play the game!](https://HoChangLee98.github.io/ai-agent-antigravity-game/)
+### 1. 실시간 멀티플레이어
+- **방 만들기/참여**: 고유 코드를 통한 간편한 방 생성 및 입장.
+- **초대 링크**: 링크 하나로 친구들을 간편하게 초대.
+- **최대 10명**: 다수의 인원이 동시에 대결 가능.
 
-*(Note: If the link doesn't work yet, please enable GitHub Pages in the repository settings)*
+### 2. 서바이벌 시스템 (3인 이상)
+- **최종 패배자 뽑기 (벌칙 모드)**: 승리자가 순차적으로 탈출하고 마지막까지 남는 꼴찌를 가리는 방식.
+- **최종 승리자 뽑기 (우승 모드)**: 패배자가 순차적으로 탈락하고 최후의 1인 우승자를 가리는 방식.
+- **관전 기능**: 먼저 탈출하거나 탈락한 플레이어는 실시간으로 남은 대결을 관전 가능.
+
+### 3. 다양한 게임 설정
+- **라운드 모드**: 단판, 3판 2선승, 5판 3선승 모드 지원. (2인 대결 시)
+- **닉네임 시스템**: 자신만의 닉네임을 설정할 수 있으며, 이름 중복 방지 기능 포함.
+- **방장 권한**: 대결 모드와 방식 설정, 다음 게임 시작 권한은 방장이 관리.
+
+### 4. 프리미엄 UX/UI
+- **모던 디자인**: 유리 질감(Glassmorphism)과 세련된 애니메이션 적용.
+- **모바일 최적화**: 스마트폰 터치 환경에 최적화된 반응형 UI.
+- **히스토리 기록**: 최근 대결 결과를 한눈에 확인 가능.
+
+## � 기술 스택
+- **Backend**: Node.js, Express
+- **Real-time**: Socket.io
+- **Frontend**: Vanilla HTML5/CSS3/JavaScript
+- **Deployment**: Docker, Cloudflare Tunnel
+
+## 🚀 로컬 실행 방법
+1. 저장소를 클론합니다.
+2. `npm install` (의존성 설치)
+3. `npm start` 또는 `node server.js` 실행
+4. 브라우저에서 `http://localhost:3000` 접속
+
+---
+Developed by **Antigravity** 🚀

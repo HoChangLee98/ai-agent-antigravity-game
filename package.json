@@ -1,0 +1,25 @@
+{
+  "name": "ai-agent-antigravity-game",
+  "version": "1.0.0",
+  "description": "A modern, premium-designed Rock Paper Scissors game with advanced features.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoChangLee98/ai-agent-antigravity-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/HoChangLee98/ai-agent-antigravity-game/issues"
+  },
+  "homepage": "https://github.com/HoChangLee98/ai-agent-antigravity-game#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  }
+}
