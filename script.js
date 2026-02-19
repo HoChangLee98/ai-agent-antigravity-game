@@ -177,6 +177,7 @@ function setupSocketListeners() {
         ui.txtConnectionStatus.textContent = '참가자를 기다리는 중...';
         ui.lobby.querySelector('.lobby-controls').classList.add('hidden');
         ui.gameModeSelect.disabled = false;
+        ui.survivalTypeSelect.disabled = false;
     });
     
     socket.on('player_count_updated', (count) => {
@@ -188,9 +189,11 @@ function setupSocketListeners() {
             ui.gameModeSelect.value = 'normal';
             ui.gameModeSelect.disabled = true;
             ui.survivalTypeGroup.classList.remove('hidden');
+            ui.survivalTypeSelect.disabled = !gameState.isHost;
         } else {
             if (gameState.isHost) ui.gameModeSelect.disabled = false;
             ui.survivalTypeGroup.classList.add('hidden');
+            ui.survivalTypeSelect.disabled = true;
         }
 
         if (count > 1) {
