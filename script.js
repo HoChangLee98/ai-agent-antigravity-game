@@ -184,16 +184,16 @@ function setupSocketListeners() {
         ui.txtPlayerCount.textContent = count;
         ui.opponentCount.value = count;
         
+        // Show survival type for host/multiplayer setup
+        ui.survivalTypeGroup.classList.remove('hidden');
+        ui.survivalTypeSelect.disabled = !gameState.isHost;
+
         // Force Normal mode for 3+ players
         if (count >= 3) {
             ui.gameModeSelect.value = 'normal';
             ui.gameModeSelect.disabled = true;
-            ui.survivalTypeGroup.classList.remove('hidden');
-            ui.survivalTypeSelect.disabled = !gameState.isHost;
         } else {
             if (gameState.isHost) ui.gameModeSelect.disabled = false;
-            ui.survivalTypeGroup.classList.add('hidden');
-            ui.survivalTypeSelect.disabled = true;
         }
 
         if (count > 1) {
